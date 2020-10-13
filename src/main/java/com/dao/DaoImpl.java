@@ -16,6 +16,7 @@ public class DaoImpl    {
 
 	private HibernateTemplate hibernateTemplate;
 	
+	// Setter getter for injecting object
 	public HibernateTemplate getHibernateTemplate() {
 		return hibernateTemplate;
 	}
@@ -24,7 +25,7 @@ public class DaoImpl    {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
-@Transactional
+@Transactional //activate by applying tx:annotation-driven in B.xml and tx annotation-driven get by apply .xsd file in B.xml
 	public int insert(Student student) {
 	
 		System.out.println(student);
